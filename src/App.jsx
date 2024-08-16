@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import LayoutRoutes from "./layout/LayoutRoutes";
 
 export default function App() {
   return (
-    <div>
-      Hello
-    </div>
-  )
+    <>
+      <LayoutRoutes />
+    </>
+  );
 }
