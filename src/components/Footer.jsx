@@ -35,20 +35,24 @@ export default function Footer() {
     { name: "Instagram", icon: insta, link: "https://" },
     { name: "Linkedin", icon: linkedin, link: "https://" },
     { name: "Twitter", icon: twitter, link: "https://" },
-    { name: "Phone", icon: phone, link: "https://" },
     { name: "Mail", icon: mail, link: "https://" },
   ];
 
   return (
     <div className="flex gap-3 flex-wrap bg-slate-400 justify-center py-24">
-      <div style={{ width: "400px" }} className="flex justify-center mb-8 items-center">
+      <div
+        style={{ width: "400px" }}
+        className="flex justify-center mb-8 items-center"
+      >
         <div>
           <img src={logo} alt="" width={200} height={200} />
           <div>
-            <h2 className="underline text-lg mb-3 font-bold">Our corporate office address</h2>
+            <h2 className="underline text-lg mb-3 font-bold">
+              Our corporate office address
+            </h2>
             <h3>
-              Sahya Building, KSITIL Special Economic Zone,Govt. Cyberpark,
-              Kozhikode-673 016, Kerala, India
+              2 J, Sahya Building, KSITIL Special Economic Zone, Govt.
+              Cyberpark, Kozhikode-673 016, Kerala, India
             </h3>
           </div>
         </div>
@@ -92,7 +96,7 @@ export default function Footer() {
                   title={item.name}
                   src={item.icon}
                   alt=""
-                  style={{ width: "20px", height: "20px" }}
+                  style={{ width: "30px", height: "30px" }}
                 />
               </Link>
             ))}

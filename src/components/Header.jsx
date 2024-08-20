@@ -42,13 +42,13 @@ export default function Header() {
           >
             <img src={mail} alt="" style={{ width: "20px", height: "20px" }} />
             <span className="hidden md:block  hover:text-red-700 cursor-pointer">
-              streesman@gmail.com
+              doctosmartacademy@gmail.com
             </span>
           </div>
           <div class=" flex gap-1">
             <img src={phone} alt="" style={{ width: "20px", height: "20px" }} />
             <span className="hidden md:block  hover:text-red-700 cursor-pointer">
-              098765421
+              +91 79073 48039
             </span>
           </div>
         </div>

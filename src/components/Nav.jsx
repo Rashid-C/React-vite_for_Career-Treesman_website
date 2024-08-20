@@ -34,7 +34,7 @@ export default function Nav() {
           </span> */}
         </a>
         <div className="flex md:order-2 space-x-3">
-          <button className="text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg">
+          <button className="text-white bg-red-600 hover:bg-blue-800 px-4 py-2 rounded-lg">
             Login
           </button>
           <button
