@@ -76,7 +76,7 @@ export default function HCourses() {
   ];
 
   return (
-    <div className="my-12 px-5">
+    <div className="py-12 px-5">
       <h1 className="text-4xl text-center font-bold">Our Courses</h1>
       <div className="flex flex-wrap justify-center my-8 gap-8">
         {courses?.map((item, index) => (
@@ -121,17 +121,17 @@ export default function HCourses() {
                     className="mx-auto mb-2"
                     width={30}
                   />
-                  <h1 className="text-xl  font-bold hello">{item.name}</h1>
+                  <h1 className="text-xl  font-bold hello text-white">{item.name}</h1>
                 </div>
               </div>
               <div className="w-full text-center">
                 {item.details?.map((items, index) => (
-                  <h2 className="text-lg mt-2" key={index}>
+                  <h2 className="text-lg mt-2  text-white" key={index}>
                     {items}
                   </h2>
                 ))}
                 <button
-                  style={{ backgroundColor: "#fff", color: "red" }}
+                  style={{ backgroundColor: "#fff", color: "#c50101" }}
                   className="mt-2 px-3 py-2 rounded-md"
                 >
                   LEARN MORE

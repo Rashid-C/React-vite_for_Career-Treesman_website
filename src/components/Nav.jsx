@@ -70,7 +70,7 @@ export default function Nav() {
         >
           <ul className="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:bg-white">
             {naviList.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="text-lg">
                 <a
                   href={item.link}
                   className="block py-2 px-3 text-gray-900 hover:bg-gray-100"

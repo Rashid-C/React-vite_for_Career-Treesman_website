@@ -1,13 +1,19 @@
 import React from "react";
 import Landing from "../components/Landing";
 import HCourses from "../components/HCourses";
-
+import HAbout from "../components/HAbout";
+import bg from '../assets/images/bg-image.jpg'
+import HLandingBox from "../components/HLandingBox";
 
 export default function Home() {
   return (
     <>
-      <Landing/>
-      <HCourses/>
+      <div style={{backgroundImage:`url(${bg})`}}>
+        <Landing />
+        <HLandingBox/>
+        <HCourses />
+        <HAbout />
+      </div>
     </>
   );
 }

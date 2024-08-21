@@ -83,10 +83,10 @@ export default function Footer() {
         <span className="text-xl font-bold">Contact</span>
         <h6 className="mt-3">
           <span className="font-bold">Email :</span>
-          muhammedramees09876@gmail.com
+          doctosmartacademy@gmail.com
         </h6>
         <h6>
-          <span className="font-bold">Contact :</span>+919207424420
+          <span className="font-bold">Contact :</span>+91 79073 48039
         </h6>
         <div className="flex gap-5 mt-5">
           {socialMedia?.length > 0 &&
