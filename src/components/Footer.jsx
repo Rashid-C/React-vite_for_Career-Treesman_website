@@ -39,7 +39,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex gap-3 flex-wrap text-white justify-center py-24" style={{backgroundColor:"#181818e8"}}>
+    <div className="flex gap-3 flex-wrap text-white justify-center py-24" style={{backgroundColor:"#3e3d47"}}>
       <div
         style={{ width: "400px" }}
         className="flex justify-center mb-8 items-center"

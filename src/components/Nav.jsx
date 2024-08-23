@@ -40,10 +40,12 @@ export default function Nav() {
           </div>
         </div>
         <div className="flex md:order-2 space-x-3">
-          <div className="flex gap-2  bg-red-600  px-4 py-2 rounded-lg">
-            <button className="text-white">Login</button>
-            <img src={loginIcon} alt="loginIcon" width={20} />
-          </div>
+          <Link to={'/login'}>
+            <div className="flex gap-2  bg-red-600  px-4 py-2 rounded-lg">
+              <button className="text-white">Login</button>
+              <img src={loginIcon} alt="loginIcon" width={20} />
+            </div>
+          </Link>
           <button
             onClick={toggleMenu}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
