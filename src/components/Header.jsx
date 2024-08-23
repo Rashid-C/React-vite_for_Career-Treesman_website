@@ -17,37 +17,37 @@ export default function Header() {
 
   return (
     <>
-      <div className="flex flex-wrap py-3 justify-end ">
+      <div className="flex flex-wrap py-3 justify-end " style={{backgroundColor:"#3E3D47"}}>
         <div className=" flex gap-3 justify-between px-2">
           <div
-            class=" flex gap-3 px-2"
+            className=" flex gap-3 px-2"
             style={{ borderRight: "1px solid red" }}
           >
             {/* <img src={fb} alt="" style={{ width: "20px", height: "20px" }} /> */}
             {socialMedia?.length > 0 &&
-              socialMedia.map((item) => (
-                <Link to={`/${item.link}`}>
+              socialMedia.map((item,index) => (
+                <Link to={`/${item.link}`} key={index}>
                   <img
                     title={item.name}
                     src={item.icon}
-                    alt=""
-                    style={{ width: "20px", height: "20px" }}
+                    alt={item.name}
+                    style={{ width: "25px", height: "25px", backgroundColor:"#fff", borderRadius:"50%"}} className="p-1"
                   />
                 </Link>
               ))}
           </div>
           <div
-            class=" flex gap-1 px-2"
+            className=" flex gap-1 px-2 cursor-pointer"
             style={{ borderRight: "1px solid red" }}
           >
-            <img src={mail} alt="" style={{ width: "20px", height: "20px" }} />
-            <span className="hidden md:block  hover:text-red-700 cursor-pointer">
+            <img src={mail} alt="" style={{ width: "25px", height: "25px", backgroundColor:"#fff", borderRadius:"50%"}} className="p-1"/>
+            <span className="hidden md:block  hover:text-red-700 text-white" >
               doctosmartacademy@gmail.com
             </span>
           </div>
-          <div class=" flex gap-1">
-            <img src={phone} alt="" style={{ width: "20px", height: "20px" }} />
-            <span className="hidden md:block  hover:text-red-700 cursor-pointer">
+          <div className=" flex gap-1 cursor-pointer">
+            <img src={phone} alt="" style={{ width: "25px", height: "25px", backgroundColor:"#fff", borderRadius:"50%"}} className="p-1" />
+            <span className="hidden md:block  hover:text-red-700 text-white ">
               +91 79073 48039
             </span>
           </div>

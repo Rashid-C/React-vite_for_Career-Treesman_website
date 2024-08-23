@@ -3,15 +3,26 @@ import phone from "../assets/images/phone.png";
 import whatsapp from "../assets/images/whatsapp.png";
 import landing_Img from "../assets/images/home-girl.webp";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import './Landing.css'
 
 export default function Landing() {
+
+  const handleUpTpTop=()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Enables smooth scrolling
+    });
+  }
   return (
-    <div className="pt-8">
-      <div className="flex flex-wrap justify-center w-full">
-        <div style={{ minWidth: "50%" }} className=" ps-5">
+    <div className="pt-8" style={{overflowX:"hidden"}}>
+      <div className="flex flex-wrap justify-center w-full gap-8">
+        {/* <div style={{ minWidth: "50%" }} className=" ps-5"> */}
+        <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%" }} className="slide-in-left">
           <div className="flex justify-center h-full w-full items-center">
             <div>
-              <h1 className="text-3xl font-bold" style={{color:"#c50101"}}>Let's Start</h1>
+              <h1 className="text-3xl font-bold" style={{ color: "#c50101" }}>
+                Let's Start
+              </h1>
               <h6 className="text-5xl font-bold hidden md:block">
                 Providing Best Education <br /> For Brighter future
               </h6>
@@ -20,49 +31,27 @@ export default function Landing() {
               </h6>
               <div className="mt-5 mb-14 ">
                 <button
-                  style={{ backgroundColor:"#c50101", color:"#fff", borderRadius:"10px"}}
+                  style={{
+                    backgroundColor: "#c50101",
+                    color: "#fff",
+                    borderRadius: "10px",
+                  }}
                   className="py-3 px-5 flex items-center gap-1"
                 >
-                  ENROLL NOW <FaLongArrowAltRight/>
+                  ENROLL NOW <FaLongArrowAltRight />
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div style={{ minWidth: "50%" }} className="flex justify-center">
-          <img src={landing_Img} alt="" style={{ width: "57%" }} />
+        {/* <div style={{ minWidth: "50%" }} className="flex justify-center"> */}
+        <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%" }} className="flex justify-center slide-in-right"> 
+          <img src={landing_Img} alt="landing-Img" style={{ width: "73%" }} /> 
+          {/* 57% */}
         </div>
       </div>
-
-      {/* <div
-        style={{
-          backgroundImage:
-            "url(https://img.freepik.com/premium-photo/floating-computer-laptop-isolated-orange-horizontal-banner-background_118047-18180.jpg)",
-          backgroundSize: "cover",
-          height: "80vh",
-        }}
-      >
-        <div className="flex justify-center h-full items-center">
-          <div>
-            <h1 className="text-4xl font-bold text-white text-center">
-              Let's Start
-            </h1>
-            <h6 className="text-xl font-bold text-white text-center">
-              Unlock your Potential with the Best Expert led IT Training
-            </h6>
-            <div className="flex justify-center mt-5">
-              <button
-                style={{ border: "1px solid #fff" }}
-                className="py-2 px-5 "
-              >
-                ENROLL
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div>
-        <div
+        <div className="flex items-center gap-3"
           style={{
             position: "fixed",
             zIndex: "1",
@@ -70,9 +59,11 @@ export default function Landing() {
             right: "10px",
           }}
         >
+          
           <button style={{ border: "1px solid red" }} className="py-2 px-5 ">
             Enquire Now
           </button>
+          <i className="fa-solid fa-angles-up text-2xl cursor-pointer" onClick={handleUpTpTop} style={{color:"#fff"}}></i>
         </div>
         <div
           style={{
@@ -80,18 +71,21 @@ export default function Landing() {
             zIndex: "1",
             bottom: "80px",
             right: "10px",
+            
           }}
         >
-          <a href="tel:0987654321" target="_blank">
-            <img
-              src={phone}
-              alt="phone"
-              title="Click to Call"
-              width={40}
-              height={40}
-              className="cursor-pointer"
-            />
-          </a>
+          <div className="d-flex justify-end">
+            <a href="tel:0987654321" target="_blank">
+              <img
+                src={phone}
+                alt="phone"
+                title="Click to Call"
+                width={40}
+                height={40}
+                className="cursor-pointer"
+              />
+            </a>
+          </div>
           <a href="https://wa.me/09871" target="_blank">
             <img
               src={whatsapp}

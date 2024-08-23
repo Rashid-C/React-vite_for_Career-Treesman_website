@@ -81,7 +81,7 @@ export default function HCourses() {
       <div className="flex flex-wrap justify-center my-8 gap-8">
         {courses?.map((item, index) => (
           <div
-            class="card cursor-pointer w-full"
+            className="card cursor-pointer w-full"
             style={{ border: "1px solid red" }}
             key={index}
           >
@@ -138,8 +138,8 @@ export default function HCourses() {
                 </button>
               </div>
             </div>
-            <div class="go-corner" href="#">
-              <div class="go-arrow">→</div>
+            <div className="go-corner" href="#">
+              <div className="go-arrow">→</div>
             </div>
           </div>
         ))}

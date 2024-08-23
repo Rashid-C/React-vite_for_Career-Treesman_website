@@ -2,7 +2,7 @@ import React from "react";
 import about_img_1 from "../assets/images/about-img-1.jpeg";
 import { GiTeacher } from "react-icons/gi";
 import "./HAbout.css";
-import bg from '../assets/images/bg-image.jpg'
+// import bg from '../assets/images/bg-image.jpg'
 
 export default function HAbout() {
   const about = [
@@ -38,7 +38,7 @@ export default function HAbout() {
 
   return (
     <div className="py-12 px-5" style={{backgroundColor:"#c50101"}}>
-      <h1 className="text-4xl text-center font-bold text-white">Our Courses</h1>
+      <h1 className="text-4xl text-center font-bold text-white">About Us</h1>
       <div className="flex flex-wrap gap-8 justify-center my-8">
         <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%",borderRadius: "10px"}} className="mt-3">
           <img src={about_img_1} alt="aboutImg" style={{ width: "100%", height:"100%",borderRadius: "10px" }} />

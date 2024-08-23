@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { HiOutlineXMark } from "react-icons/hi2";
-import logo from '../assets/images/logo.png'
+import logo from "../assets/images/logo.png";
+import { Link, useLocation } from "react-router-dom";
+import loginIcon from "../assets/images/loginIcon.png";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const location = useLocation();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -22,21 +24,26 @@ export default function Nav() {
   return (
     <nav className="bg-white w-full z-20 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3">
-          <img
-            src={logo}
-            className="h-15"
-            alt="Logo"
-            width={100}
-          />
-          {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">
-            Career Streesman
+        {/* <a href="/" className="flex items-center space-x-3"> */}
+        {/* <img src={logo} className="h-15" alt="Logo" width={100} /> */}
+        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap">
+            Career <br />Streesman
           </span> */}
-        </a>
+        {/* </a> */}
+        <div className="flex items-center gap-2 mb-3 ">
+          <img src={logo} alt="logo" width={100} height={100} />
+          <div>
+            <h3 className="text-3xl font-bold">
+              Career <br />
+              Streesman{" "}
+            </h3>
+          </div>
+        </div>
         <div className="flex md:order-2 space-x-3">
-          <button className="text-white bg-red-600 hover:bg-blue-800 px-4 py-2 rounded-lg">
-            Login
-          </button>
+          <div className="flex gap-2  bg-red-600  px-4 py-2 rounded-lg">
+            <button className="text-white">Login</button>
+            <img src={loginIcon} alt="loginIcon" width={20} />
+          </div>
           <button
             onClick={toggleMenu}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
@@ -70,13 +77,15 @@ export default function Nav() {
         >
           <ul className="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:bg-white">
             {naviList.map((item, index) => (
-              <li key={index} className="text-lg">
-                <a
-                  href={item.link}
-                  className="block py-2 px-3 text-gray-900 hover:bg-gray-100"
-                >
+              <li
+                key={index}
+                className={`text-lg font-bold hover:text-red-700 ${
+                  location.pathname == item.link ? "text-red-700" : "text-black"
+                } `}
+              >
+                <Link to={item.link} className="block py-2 px-3">
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

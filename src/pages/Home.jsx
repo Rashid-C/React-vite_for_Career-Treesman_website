@@ -4,6 +4,8 @@ import HCourses from "../components/HCourses";
 import HAbout from "../components/HAbout";
 import bg from '../assets/images/bg-image.jpg'
 import HLandingBox from "../components/HLandingBox";
+import HPlacement from "../components/HPlacement";
+import HFaq from "../components/HFaq";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <HLandingBox/>
         <HCourses />
         <HAbout />
+        <HPlacement/>
+        <HFaq/>
       </div>
     </>
   );

@@ -39,13 +39,23 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex gap-3 flex-wrap bg-slate-400 justify-center py-24">
+    <div className="flex gap-3 flex-wrap text-white justify-center py-24" style={{backgroundColor:"#181818e8"}}>
       <div
         style={{ width: "400px" }}
         className="flex justify-center mb-8 items-center"
       >
         <div>
-          <img src={logo} alt="" width={200} height={200} />
+          <div className="flex items-center gap-2 mb-3">
+            <img
+              src={logo}
+              alt="logo"
+              width={100}
+              height={100}
+            />
+            <div>
+              <h3 className="text-3xl font-bold">Career <br />Streesman </h3>
+            </div>
+          </div>
           <div>
             <h2 className="underline text-lg mb-3 font-bold">
               Our corporate office address
@@ -61,8 +71,8 @@ export default function Footer() {
         <span className="text-xl font-bold">Links</span>
         <ul className="mt-3">
           {naviList.length > 0 &&
-            naviList.map((item) => (
-              <li>
+            naviList.map((item, index) => (
+              <li key={index + 100}>
                 <Link to={`/${item.link}`}>{item.name}</Link>
               </li>
             ))}
@@ -72,8 +82,8 @@ export default function Footer() {
         <span className="text-xl font-bold ">Courses</span>
         <ul className="mt-3">
           {Courses.length > 0 &&
-            Courses.map((item) => (
-              <li>
+            Courses.map((item, index) => (
+              <li key={index + 200}>
                 <Link to={`/${item.link}`}>{item.name}</Link>
               </li>
             ))}
@@ -90,12 +100,12 @@ export default function Footer() {
         </h6>
         <div className="flex gap-5 mt-5">
           {socialMedia?.length > 0 &&
-            socialMedia.map((item) => (
-              <Link to={`/${item.link}`}>
+            socialMedia.map((item, index) => (
+              <Link to={`/${item.link}`} key={index + 300}>
                 <img
                   title={item.name}
                   src={item.icon}
-                  alt=""
+                  alt={item.name}
                   style={{ width: "30px", height: "30px" }}
                 />
               </Link>

@@ -27,11 +27,11 @@ export default function HLandingBox() {
   return (
     <div
       style={{ backgroundColor: "#c50101", color: "#fff", height: "150px" }}
-      className=" flex justify-evenly items-center"
+      className=" flex justify-evenly items-center px-5"
     >
       {contents?.map((item, index) => (
-        <>
-          <div key={index} className="hidden lg:block">
+        <div key={index}>
+          <div className="hidden lg:block">
             <h1 className="text-6xl font-bold text-center">{item.count}+</h1>
             <h4 className="text-center text-lg">{item.about}</h4>
           </div>
@@ -43,7 +43,7 @@ export default function HLandingBox() {
             <h1 className="text-xl font-bold text-center">{item.count}+</h1>
             <h4 className="text-center text-xs">{item.about}</h4>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
