@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <div className="py-12 bg-[#f0eef6]">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap ">
         {/* Mobile version */}
-        <div className="md:hidden w-full mb-5">
-          <div className="bg-[#c50101] h-[250px] rounded-l-[400px] rounded-b-[180px] flex justify-center items-center ml-3 md:ml-20 flex-col">
+        <div className="md:hidden w-full mb-12">
+          <div className="bg-[#c50101] h-[250px] flex justify-center items-center ml-3 md:ml-20 flex-col"  style={{borderRadius:"300px 0px 0px 300px "}}>
             <div className="w-3/4 text-white">
               <h4 className="text-[clamp(1.0625rem,0.8958rem+0.6667vw,1.4375rem)]">
                 Explore the vibrant world of social media and uncover endless
@@ -81,7 +81,7 @@ export default function Login() {
 
         {/* Desktop version */}
         <div className="hidden md:flex md:w-1/2 w-full mb-5">
-          <div className="bg-[#c50101] h-[600px] rounded-l-[400px] rounded-b-[180px] flex justify-center items-center ml-3 md:ml-20 flex-col">
+          <div className="bg-[#c50101] h-[600px]  flex justify-center items-center ml-3 md:ml-20 flex-col" style={{borderRadius:"300px 0px 0px 300px"}}>
             <div className="w-3/4 text-white">
               <h4 className="text-[clamp(1.0625rem,0.8958rem+0.6667vw,1.4375rem)] ">
                 Explore the vibrant world of social media and uncover endless

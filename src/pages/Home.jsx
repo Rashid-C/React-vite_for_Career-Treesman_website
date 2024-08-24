@@ -19,7 +19,6 @@ export default function Home() {
         <HPlacement/>
         <HFaq/>
         <HTestimonial/>
-        <HFaq/>
       </div>
     </>
   );
