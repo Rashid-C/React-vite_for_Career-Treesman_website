@@ -6,6 +6,7 @@ import HLandingBox from "../components/HLandingBox";
 import HPlacement from "../components/HPlacement";
 import HFaq from "../components/HFaq";
 import HLanding from "../components/HLanding";
+import HTestimonial from "../components/HTestimonial";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <HCourses />
         <HAbout />
         <HPlacement/>
+        <HFaq/>
+        <HTestimonial/>
         <HFaq/>
       </div>
     </>

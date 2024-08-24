@@ -43,7 +43,7 @@ export default function HAbout() {
         <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%",borderRadius: "10px"}} className="mt-3">
           <img src={about_img_1} alt="aboutImg" style={{ width: "100%", height:"100%",borderRadius: "10px" }} />
         </div>
-        <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%" }}>
+        <div style={{ maxWidth: "575px", minWidth: "350px", width: "100%" }} className="px-3">
           {about?.map((item, index) => (
             <div id="hello"
               style={{

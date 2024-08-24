@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import about_img_1 from "../assets/images/about-img-1.jpeg";
 
 export default function HFaq() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -10,17 +10,23 @@ export default function HFaq() {
 
   const items = [
     {
-      title: "What is Flowbite ?",
-      content: "Flowbite is an open-source library...",
-    },
-    {
-      title: "Is there a Figma file available ?",
-      content: "Flowbite is first conceptualized and designed using Figma...",
-    },
-    {
-      title: "What are the differences between Flowbite and Tailwind UI ?",
+      title: "What is full-stack development ?",
       content:
-        "The main difference is that Flowbite's core components are open source...",
+        "Full-stack development involves both front-end and back-end programming, and full-stack developers are proficient in both areas. They can work on all layers of a web application.",
+    },
+    {
+      title: "What kind of placements do you offer ?",
+      content:
+        "We offer placement assistance to our students, which includes resume preparation, interview training, and job referrals. We work with a wide range of companies in the tech industry to help our students find the best job opportunities.",
+    },
+    {
+      title: "Do you offer online courses ?",
+      content:
+        "Yes, we offer both online and in-person courses to suit the needs of our students. Our online courses are taught by experienced instructors and provide the same quality of education as our in-person courses.",
+    },
+    {
+      title: "What topics are covered in your full-stack development course ?",
+      content:"Our full-stack development course covers a wide range of topics, including HTML, CSS, JavaScript, jQuery, React, Node.js, Express.js, MongoDB, MySQL, and more. You will also learn how to build and deploy full-stack web applications."
     },
   ];
   return (
@@ -66,7 +72,9 @@ export default function HFaq() {
                   openIndex === index ? "open" : "hidden"
                 }`}
               >
-                {openIndex === index && <p style={{color:"#d5d5d5"}}>A. {item.content}</p>}
+                {openIndex === index && (
+                  <p style={{ color: "#d5d5d5" }}>A. {item.content}</p>
+                )}
               </div>
             </div>
           ))}

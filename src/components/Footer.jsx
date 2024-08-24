@@ -39,21 +39,22 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex gap-3 flex-wrap text-white justify-center py-24" style={{backgroundColor:"#3e3d47"}}>
+    <div
+      className="flex gap-3 flex-wrap text-white justify-center py-24"
+      style={{ backgroundColor: "#3e3d47" }}
+    >
       <div
         style={{ width: "400px" }}
         className="flex justify-center mb-8 items-center"
       >
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <img
-              src={logo}
-              alt="logo"
-              width={100}
-              height={100}
-            />
+            <img src={logo} alt="logo" width={100} height={100} />
             <div>
-              <h3 className="text-3xl font-bold">Career <br />Streesman </h3>
+              <h3 className="text-3xl font-bold">
+                Career <br />
+                Streesman{" "}
+              </h3>
             </div>
           </div>
           <div>
@@ -68,15 +69,17 @@ export default function Footer() {
         </div>
       </div>
       <div style={{ width: "200px" }} className="mb-8">
-        <span className="text-xl font-bold">Links</span>
-        <ul className="mt-3">
-          {naviList.length > 0 &&
-            naviList.map((item, index) => (
-              <li key={index + 100}>
-                <Link to={`/${item.link}`}>{item.name}</Link>
-              </li>
-            ))}
-        </ul>
+        <div>
+          <span className="text-xl font-bold">Links</span>
+          <ul className="mt-3">
+            {naviList.length > 0 &&
+              naviList.map((item, index) => (
+                <li key={index + 100}>
+                  <Link to={`/${item.link}`}>{item.name}</Link>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
       <div style={{ width: "200px" }} className="mb-8">
         <span className="text-xl font-bold ">Courses</span>
