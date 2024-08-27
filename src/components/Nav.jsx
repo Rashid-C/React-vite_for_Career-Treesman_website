@@ -30,7 +30,7 @@ export default function Nav() {
             Career <br />Streesman
           </span> */}
         {/* </a> */}
-        <div className="flex items-center gap-2 mb-3 ">
+        <div className="flex items-center gap-2 ">
           <img src={logo} alt="logo" width={100} height={100} />
           <div>
             <h3 className="text-3xl font-bold">
@@ -40,7 +40,7 @@ export default function Nav() {
           </div>
         </div>
         <div className="flex md:order-2 space-x-3">
-          <Link to={'/login'}>
+          <Link to={"/login"}>
             <div className="flex gap-2  bg-red-600  px-4 py-2 rounded-lg">
               <button className="text-white">Login</button>
               <img src={loginIcon} alt="loginIcon" width={20} />

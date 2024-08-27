@@ -6,7 +6,7 @@ export default function HTestimonial() {
   const [carouselHeight, setCarouselHeight] = useState("auto");
   const carouselRef = useRef(null);
 
-  const slides = [
+  const reviews = [
     {
       image:
         "https://static.vecteezy.com/system/resources/thumbnails/041/714/266/small_2x/ai-generated-professional-man-in-suit-with-arms-crossed-on-transparent-background-stock-png.png",
@@ -36,14 +36,14 @@ export default function HTestimonial() {
   const goToNext = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
   };
 
   const goToPrevious = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+      (prevIndex) => (prevIndex - 1 + reviews.length) % slides.length
     );
   };
 
@@ -95,10 +95,10 @@ export default function HTestimonial() {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           ref={carouselRef}
         >
-          {slides.map((slide, index) => (
+          {reviews.map((item, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full md:flex gap-8 justify-center"
+              className="flex-shrink-0 w-full md:flex gap-12 justify-center"
             >
               <div className="w-full md:w-1/2 flex justify-center">
                 <div
@@ -110,7 +110,7 @@ export default function HTestimonial() {
                   }}
                 >
                   <img
-                    src={slide.image}
+                    src={item.image}
                     className="w-60  object-cover rounded-lg"
                     alt={`Carousel item ${index + 1}`}
                   />
@@ -126,7 +126,7 @@ export default function HTestimonial() {
                   }}
                 >
                   <div style={{}} className="p-4">
-                    <p className="text-lg">{slide.content}</p>
+                    <p className="text-lg">{item.content}</p>
                     <div className=" mt-3 flex justify-between items-end">
                       <div className="flex gap-4" style={{ color: "#c50101" }}>
                         <button onClick={goToPrevious}>
@@ -141,9 +141,9 @@ export default function HTestimonial() {
                           className="text-xl font-bold"
                           style={{ color: "#c50101" }}
                         >
-                          {slide.name}
+                          {item.name}
                         </h1>
-                        <h1 className="text-lg">{slide.role}</h1>
+                        <h1 className="text-lg">{item.role}</h1>
                       </div>
                     </div>
                   </div>

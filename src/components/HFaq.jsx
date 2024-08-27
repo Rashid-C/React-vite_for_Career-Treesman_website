@@ -32,7 +32,7 @@ export default function HFaq() {
   return (
     <div className="py-12 px-5" style={{ backgroundColor: "#c50101" }}>
       <h1 className="text-4xl text-center font-bold text-white">FAQ</h1>
-      <div className="flex flex-wrap gap-8 justify-center my-8">
+      <div className="flex flex-wrap gap-12 justify-center my-8">
         <div
           style={{
             maxWidth: "575px",
@@ -58,7 +58,7 @@ export default function HFaq() {
           className="mt-3"
         >
           {items.map((item, index) => (
-            <div key={index} className="px-3">
+            <div key={index} >
               <button
                 onClick={() => toggleAccordion(index)}
                 className="accordion-header pt-4 w-full text-left pb-2 text-white text-xl"

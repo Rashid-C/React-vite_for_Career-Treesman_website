@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
-    <div className="py-12 bg-[#f0eef6]">
+    <div className="py-12 ">
       <div className="flex flex-wrap">
         {/* Mobile Version */}
         <div className="w-full md:hidden mb-5">
